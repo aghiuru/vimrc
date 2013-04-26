@@ -40,10 +40,12 @@ set autoread
 set shiftround
 set title
 set dictionary=/usr/share/dict/words
+set number
 
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set softtabstop=4
 
 syntax on
 filetype on
@@ -84,6 +86,7 @@ nnoremap <space> za
 " }}}
 
 " Color scheme
+set t_Co=16
 set background=dark
 colorscheme solarized 
 
@@ -133,6 +136,9 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-h> <c-w>h
 map <c-l> <c-w>l
+
+map <c-n> :bp<cr>
+map <c-m> :bn<cr>
 " }}}
 
 " Delete to end of line
@@ -164,6 +170,5 @@ set completeopt=menuone,longest,preview
 " Ropevim
 map <leader>j :RopeGotoDefinition<cr>
 map <leader>r :RopeRename<cr>
-
 " Ack
 nmap <leader>a <Esc>:Ack!
